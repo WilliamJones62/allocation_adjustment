@@ -1,0 +1,436 @@
+<%= form_with(model: allocation, local: true) do |form| %>
+  <% if allocation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(allocation.errors.count, "error") %> prohibited this allocation from being saved:</h2>
+
+      <ul>
+      <% allocation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :allocation_name %>
+  </div>
+  <h2> From </h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Cost Center</th>
+        <th>SKU</th>
+        <th>Description</th>
+        <th>Units</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_channel_1, @channel, {}, {:value => params[:from_channel_1]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_cc_1, @cc, {}, {:value => params[:from_cc_1]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="from_sku_1">
+              <%= form.select :from_sku_1, @sku, {}, {:value => params[:from_sku_1], :onChange=> "alert('Hello');" }%>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="from_desc_1">
+            <%= form.text_field :from_desc_1, id: :allocation_name %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :from_units_1, id: :allocation_from_units_1 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_channel_2, @channel, {}, {:value => params[:from_channel_2]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_cc_2, @cc, {}, {:value => params[:from_cc_2]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="from_sku_2">
+              <%= form.select :from_sku_2, @sku, {}, {:value => params[:from_sku_2]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="from_desc_2">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :from_units_2, id: :allocation_from_units_2 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_channel_3, @channel, {}, {:value => params[:from_channel_3]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_cc_3, @cc, {}, {:value => params[:from_cc_3]} %>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="from_sku_3">
+              <%= form.select :from_sku_3, @sku, {}, {:value => params[:from_sku_3]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="from_desc_3">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :from_units_3, id: :allocation_from_units_3 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_channel_4, @channel, {}, {:value => params[:from_channel_4]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_cc_4, @cc, {}, {:value => params[:from_cc_4]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="from_sku_4">
+              <%= form.select :from_sku_4, @sku, {}, {:value => params[:from_sku_4]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="from_desc_4">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :from_units_4, id: :allocation_from_units_4 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_channel_5, @channel, {}, {:value => params[:from_channel_5]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_cc_5, @cc, {}, {:value => params[:from_cc_5]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="from_sku_5">
+              <%= form.select :from_sku_5, @sku, {}, {:value => params[:from_sku_5]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="from_desc_5">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :from_units_5, id: :allocation_from_units_5 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_channel_6, @channel, {}, {:value => params[:from_channel_6]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :from_cc_6, @cc, {}, {:value => params[:from_cc_6]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="from_sku_6">
+              <%= form.select :from_sku_6, @sku, {}, {:value => params[:from_sku_6]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="from_desc_6">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :from_units_6, id: :allocation_from_units_6 %>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2> To </h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Cost Center</th>
+        <th>SKU</th>
+        <th>Description</th>
+        <th>Units</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_channel_1, @channel, {}, {:value => params[:to_channel_1]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_cc_1, @cc, {}, {:value => params[:to_cc_1]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="to_sku_1">
+              <%= form.select :to_sku_1, @sku, {}, {:value => params[:to_sku_1]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="to_desc_1">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :to_units_1, id: :allocation_to_units_1 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_channel_2, @channel, {}, {:value => params[:to_channel_2]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_cc_2, @cc, {}, {:value => params[:to_cc_2]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="to_sku_2">
+              <%= form.select :to_sku_2, @sku, {}, {:value => params[:to_sku_2]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="to_desc_2">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :to_units_2, id: :allocation_to_units_2 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_channel_3, @channel, {}, {:value => params[:to_channel_3]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_cc_3, @cc, {}, {:value => params[:to_cc_3]} %>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="to_sku_3">
+              <%= form.select :to_sku_3, @sku, {}, {:value => params[:to_sku_3]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="to_desc_3">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :to_units_3, id: :allocation_to_units_3 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_channel_4, @channel, {}, {:value => params[:to_channel_4]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_cc_4, @cc, {}, {:value => params[:to_cc_4]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="to_sku_4">
+              <%= form.select :to_sku_4, @sku, {}, {:value => params[:to_sku_4]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="to_desc_4">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :to_units_4, id: :allocation_to_units_4 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_channel_5, @channel, {}, {:value => params[:to_channel_5]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_cc_5, @cc, {}, {:value => params[:to_cc_5]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="to_sku_5">
+              <%= form.select :to_sku_5, @sku, {}, {:value => params[:to_sku_5]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="to_desc_5">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :to_units_5, id: :allocation_to_units_5 %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_channel_6, @channel, {}, {:value => params[:to_channel_6]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls">
+              <%= form.select :to_cc_6, @cc, {}, {:value => params[:to_cc_6]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="control-group">
+            <div class="controls" id="to_sku_6">
+              <%= form.select :to_sku_6, @sku, {}, {:value => params[:to_sku_6]} %>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="field" id="to_desc_6">
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.number_field :to_units_6, id: :allocation_to_units_6 %>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

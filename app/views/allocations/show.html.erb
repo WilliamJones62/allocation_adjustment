@@ -1,0 +1,232 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @allocation.name %>
+</p>
+
+<h2> From </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Channel</th>
+      <th>Cost Center</th>
+      <th>SKU</th>
+      <th>Description</th>
+      <th>Units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @allocation.from_channel_1 %>
+      </td>
+      <td>
+        <%= @allocation.from_cc_1 %>
+      </td>
+      <td>
+        <%= @allocation.from_sku_1 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.from_units_1 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.from_channel_2 %>
+      </td>
+      <td>
+        <%= @allocation.from_cc_2 %>
+      </td>
+      <td>
+        <%= @allocation.from_sku_2 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.from_units_2 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.from_channel_3 %>
+      </td>
+      <td>
+        <%= @allocation.from_cc_3 %>
+      </td>
+      <td>
+        <%= @allocation.from_sku_3 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.from_units_3 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.from_channel_4 %>
+      </td>
+      <td>
+        <%= @allocation.from_cc_4 %>
+      </td>
+      <td>
+        <%= @allocation.from_sku_4 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.from_units_4 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.from_channel_5 %>
+      </td>
+      <td>
+        <%= @allocation.from_cc_5 %>
+      </td>
+      <td>
+        <%= @allocation.from_sku_5 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.from_units_5 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.from_channel_6 %>
+      </td>
+      <td>
+        <%= @allocation.from_cc_6 %>
+      </td>
+      <td>
+        <%= @allocation.from_sku_6 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.from_units_6 %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2> To </h2>
+<table>
+  <thead>
+    <tr>
+      <th>Channel</th>
+      <th>Cost Center</th>
+      <th>SKU</th>
+      <th>Description</th>
+      <th>Units</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @allocation.to_channel_1 %>
+      </td>
+      <td>
+        <%= @allocation.to_cc_1 %>
+      </td>
+      <td>
+        <%= @allocation.to_sku_1 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.to_units_1 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.to_channel_2 %>
+      </td>
+      <td>
+        <%= @allocation.to_cc_2 %>
+      </td>
+      <td>
+        <%= @allocation.to_sku_2 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.to_units_2 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.to_channel_3 %>
+      </td>
+      <td>
+        <%= @allocation.to_cc_3 %>
+      </td>
+      <td>
+        <%= @allocation.to_sku_3 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.to_units_3 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.to_channel_4 %>
+      </td>
+      <td>
+        <%= @allocation.to_cc_4 %>
+      </td>
+      <td>
+        <%= @allocation.to_sku_4 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.to_units_4 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.to_channel_5 %>
+      </td>
+      <td>
+        <%= @allocation.to_cc_5 %>
+      </td>
+      <td>
+        <%= @allocation.to_sku_5 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.to_units_5 %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @allocation.to_channel_6 %>
+      </td>
+      <td>
+        <%= @allocation.to_cc_6 %>
+      </td>
+      <td>
+        <%= @allocation.to_sku_6 %>
+      </td>
+      <td>
+      </td>
+      <td>
+        <%= @allocation.to_units_6 %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Back', allocations_path %>
