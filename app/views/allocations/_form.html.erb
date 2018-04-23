@@ -24,7 +24,6 @@
         <th>SKU</th>
         <th>Description</th>
         <th>Units</th>
-        <th colspan="3"></th>
       </tr>
     </thead>
     <tbody>
@@ -45,14 +44,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="from_sku_1">
-              <%= form.select :from_sku_1, @sku, {}, {:value => params[:from_sku_1], :onChange=> "alert('Hello');" }%>
+            <div class="controls">
+              <%= form.select :from_sku_1, @sku, {}, {:value => params[:from_sku_1], :id => "from_sku_1", :onChange=> ('set_description("from_sku_1", "from_desc_1")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="from_desc_1">
-            <%= form.text_field :from_desc_1, id: :allocation_name %>
+            <% if allocation.errors.any? && @allocation.from_sku_1 && @allocation.from_sku_1 != ' ' %>
+              <%= get_description(@allocation.from_sku_1) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -78,13 +79,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="from_sku_2">
-              <%= form.select :from_sku_2, @sku, {}, {:value => params[:from_sku_2]} %>
+            <div class="controls">
+              <%= form.select :from_sku_2, @sku, {}, {:value => params[:from_sku_2], :id => "from_sku_2", :onChange=> ('set_description("from_sku_2", "from_desc_2")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="from_desc_2">
+            <% if allocation.errors.any? && @allocation.from_sku_2 && @allocation.from_sku_2 != ' ' %>
+              <%= get_description(@allocation.from_sku_2) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -109,13 +113,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="from_sku_3">
-              <%= form.select :from_sku_3, @sku, {}, {:value => params[:from_sku_3]} %>
+            <div class="controls">
+              <%= form.select :from_sku_3, @sku, {}, {:value => params[:from_sku_3], :id => "from_sku_3", :onChange=> ('set_description("from_sku_3", "from_desc_3")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="from_desc_3">
+            <% if allocation.errors.any? && @allocation.from_sku_3 && @allocation.from_sku_3 != ' ' %>
+              <%= get_description(@allocation.from_sku_3) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -141,13 +148,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="from_sku_4">
-              <%= form.select :from_sku_4, @sku, {}, {:value => params[:from_sku_4]} %>
+            <div class="controls">
+              <%= form.select :from_sku_4, @sku, {}, {:value => params[:from_sku_4], :id => "from_sku_4", :onChange=> ('set_description("from_sku_4", "from_desc_4")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="from_desc_4">
+            <% if allocation.errors.any? && @allocation.from_sku_4 && @allocation.from_sku_4 != ' ' %>
+              <%= get_description(@allocation.from_sku_4) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -173,13 +183,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="from_sku_5">
-              <%= form.select :from_sku_5, @sku, {}, {:value => params[:from_sku_5]} %>
+            <div class="controls">
+              <%= form.select :from_sku_5, @sku, {}, {:value => params[:from_sku_5], :id => "from_sku_5", :onChange=> ('set_description("from_sku_5", "from_desc_5")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="from_desc_5">
+            <% if allocation.errors.any? && @allocation.from_sku_5 && @allocation.from_sku_5 != ' ' %>
+              <%= get_description(@allocation.from_sku_5) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -205,13 +218,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="from_sku_6">
-              <%= form.select :from_sku_6, @sku, {}, {:value => params[:from_sku_6]} %>
+            <div class="controls">
+              <%= form.select :from_sku_6, @sku, {}, {:value => params[:from_sku_6], :id => "from_sku_6", :onChange=> ('set_description("from_sku_6", "from_desc_6")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="from_desc_6">
+            <% if allocation.errors.any? && @allocation.from_sku_6 && @allocation.from_sku_6 != ' ' %>
+              <%= get_description(@allocation.from_sku_6) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -254,13 +270,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="to_sku_1">
-              <%= form.select :to_sku_1, @sku, {}, {:value => params[:to_sku_1]} %>
+            <div class="controls">
+              <%= form.select :to_sku_1, @sku, {}, {:value => params[:to_sku_1], :id => "to_sku_1", :onChange=> ('set_description("to_sku_1", "to_desc_1")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="to_desc_1">
+            <% if allocation.errors.any? && @allocation.to_sku_1 && @allocation.to_sku_1 != ' ' %>
+              <%= get_description(@allocation.to_sku_1) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -286,13 +305,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="to_sku_2">
-              <%= form.select :to_sku_2, @sku, {}, {:value => params[:to_sku_2]} %>
+            <div class="controls">
+              <%= form.select :to_sku_2, @sku, {}, {:value => params[:to_sku_2], :id => "to_sku_2", :onChange=> ('set_description("to_sku_2", "to_desc_2")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="to_desc_2">
+            <% if allocation.errors.any? && @allocation.to_sku_2 && @allocation.to_sku_2 != ' ' %>
+              <%= get_description(@allocation.to_sku_2) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -317,13 +339,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="to_sku_3">
-              <%= form.select :to_sku_3, @sku, {}, {:value => params[:to_sku_3]} %>
+            <div class="controls">
+              <%= form.select :to_sku_3, @sku, {}, {:value => params[:to_sku_3], :id => "to_sku_3", :onChange=> ('set_description("to_sku_3", "to_desc_3")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="to_desc_3">
+            <% if allocation.errors.any? && @allocation.to_sku_3 && @allocation.to_sku_3 != ' ' %>
+              <%= get_description(@allocation.to_sku_3) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -349,13 +374,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="to_sku_4">
-              <%= form.select :to_sku_4, @sku, {}, {:value => params[:to_sku_4]} %>
+            <div class="controls">
+              <%= form.select :to_sku_4, @sku, {}, {:value => params[:to_sku_4], :id => "to_sku_4", :onChange=> ('set_description("to_sku_4", "to_desc_4")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="to_desc_4">
+            <% if allocation.errors.any? && @allocation.to_sku_4 && @allocation.to_sku_4 != ' ' %>
+              <%= get_description(@allocation.to_sku_4) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -381,13 +409,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="to_sku_5">
-              <%= form.select :to_sku_5, @sku, {}, {:value => params[:to_sku_5]} %>
+            <div class="controls">
+              <%= form.select :to_sku_5, @sku, {}, {:value => params[:to_sku_5], :id => "to_sku_5", :onChange=> ('set_description("to_sku_5", "to_desc_5")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="to_desc_5">
+            <% if allocation.errors.any? && @allocation.to_sku_5 && @allocation.to_sku_5 != ' ' %>
+              <%= get_description(@allocation.to_sku_5) %>
+            <% end %>
           </div>
         </td>
         <td>
@@ -413,13 +444,16 @@
         </td>
         <td>
           <div class="control-group">
-            <div class="controls" id="to_sku_6">
-              <%= form.select :to_sku_6, @sku, {}, {:value => params[:to_sku_6]} %>
+            <div class="controls">
+              <%= form.select :to_sku_6, @sku, {}, {:value => params[:to_sku_6], :id => "to_sku_6", :onChange=> ('set_description("to_sku_6", "to_desc_6")')} %>
             </div>
           </div>
         </td>
         <td>
           <div class="field" id="to_desc_6">
+            <% if allocation.errors.any? && @allocation.to_sku_6 && @allocation.to_sku_6 != ' ' %>
+              <%= get_description(@allocation.to_sku_6) %>
+            <% end %>
           </div>
         </td>
         <td>

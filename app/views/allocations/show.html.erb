@@ -18,6 +18,7 @@
     </tr>
   </thead>
   <tbody>
+    <% if @allocation.from_channel_1 != ' ' %>
     <tr>
       <td>
         <%= @allocation.from_channel_1 %>
@@ -29,11 +30,16 @@
         <%= @allocation.from_sku_1 %>
       </td>
       <td>
+        <% if @allocation.from_sku_1 && @allocation.from_sku_1 != ' ' %>
+          <%= get_description(@allocation.from_sku_1) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.from_units_1 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.from_channel_2 != ' ' %>
     <tr>
       <td>
         <%= @allocation.from_channel_2 %>
@@ -45,11 +51,16 @@
         <%= @allocation.from_sku_2 %>
       </td>
       <td>
+        <% if @allocation.from_sku_2 && @allocation.from_sku_2 != ' ' %>
+          <%= get_description(@allocation.from_sku_2) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.from_units_2 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.from_channel_3 != ' ' %>
     <tr>
       <td>
         <%= @allocation.from_channel_3 %>
@@ -61,11 +72,16 @@
         <%= @allocation.from_sku_3 %>
       </td>
       <td>
+        <% if @allocation.from_sku_3 && @allocation.from_sku_3 != ' ' %>
+          <%= get_description(@allocation.from_sku_3) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.from_units_3 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.from_channel_4 != ' ' %>
     <tr>
       <td>
         <%= @allocation.from_channel_4 %>
@@ -77,11 +93,16 @@
         <%= @allocation.from_sku_4 %>
       </td>
       <td>
+        <% if @allocation.from_sku_4 && @allocation.from_sku_4 != ' ' %>
+          <%= get_description(@allocation.from_sku_4) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.from_units_4 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.from_channel_5 != ' ' %>
     <tr>
       <td>
         <%= @allocation.from_channel_5 %>
@@ -93,11 +114,16 @@
         <%= @allocation.from_sku_5 %>
       </td>
       <td>
+        <% if @allocation.from_sku_5 && @allocation.from_sku_5 != ' ' %>
+          <%= get_description(@allocation.from_sku_5) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.from_units_5 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.from_channel_6 != ' ' %>
     <tr>
       <td>
         <%= @allocation.from_channel_6 %>
@@ -109,11 +135,15 @@
         <%= @allocation.from_sku_6 %>
       </td>
       <td>
+        <% if @allocation.from_sku_6 && @allocation.from_sku_6 != ' ' %>
+          <%= get_description(@allocation.from_sku_6) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.from_units_6 %>
       </td>
     </tr>
+    <% end %>
   </tbody>
 </table>
 
@@ -130,6 +160,7 @@
     </tr>
   </thead>
   <tbody>
+    <% if @allocation.to_channel_1 != ' ' %>
     <tr>
       <td>
         <%= @allocation.to_channel_1 %>
@@ -141,11 +172,16 @@
         <%= @allocation.to_sku_1 %>
       </td>
       <td>
+        <% if @allocation.to_sku_1 && @allocation.to_sku_1 != ' ' %>
+          <%= get_description(@allocation.to_sku_1) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.to_units_1 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.to_channel_2 != ' ' %>
     <tr>
       <td>
         <%= @allocation.to_channel_2 %>
@@ -157,11 +193,16 @@
         <%= @allocation.to_sku_2 %>
       </td>
       <td>
+        <% if @allocation.to_sku_2 && @allocation.to_sku_2 != ' ' %>
+          <%= get_description(@allocation.to_sku_2) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.to_units_2 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.to_channel_3 != ' ' %>
     <tr>
       <td>
         <%= @allocation.to_channel_3 %>
@@ -173,11 +214,16 @@
         <%= @allocation.to_sku_3 %>
       </td>
       <td>
+        <% if @allocation.to_sku_3 && @allocation.to_sku_3 != ' ' %>
+          <%= get_description(@allocation.to_sku_3) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.to_units_3 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.to_channel_4 != ' ' %>
     <tr>
       <td>
         <%= @allocation.to_channel_4 %>
@@ -189,11 +235,16 @@
         <%= @allocation.to_sku_4 %>
       </td>
       <td>
+        <% if @allocation.to_sku_4 && @allocation.to_sku_4 != ' ' %>
+          <%= get_description(@allocation.to_sku_4) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.to_units_4 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.to_channel_5 != ' ' %>
     <tr>
       <td>
         <%= @allocation.to_channel_5 %>
@@ -205,11 +256,16 @@
         <%= @allocation.to_sku_5 %>
       </td>
       <td>
+        <% if @allocation.to_sku_5 && @allocation.to_sku_5 != ' ' %>
+          <%= get_description(@allocation.to_sku_5) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.to_units_5 %>
       </td>
     </tr>
+    <% end %>
+    <% if @allocation.to_channel_6 != ' ' %>
     <tr>
       <td>
         <%= @allocation.to_channel_6 %>
@@ -221,11 +277,15 @@
         <%= @allocation.to_sku_6 %>
       </td>
       <td>
+        <% if @allocation.to_sku_6 && @allocation.to_sku_6 != ' ' %>
+          <%= get_description(@allocation.to_sku_6) %>
+        <% end %>
       </td>
       <td>
         <%= @allocation.to_units_6 %>
       </td>
     </tr>
+    <% end %>
   </tbody>
 </table>
 

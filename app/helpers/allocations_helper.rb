@@ -1,10 +1,10 @@
 module AllocationsHelper
   def display_stamp(datetime)
-    formatted = datetime.strftime("%I:%M:%S %p")
+    formatted = datetime.strftime("%Y %m %d at %H:%M:%S")
   end
 
   def get_description(sku)
-    hbfc = Holidaybirdfc.where(sku: sku).first
-    @description = hbfc.description
+    @holidaybirdfc = Holidaybirdfc.where(sku: sku).first
+    description = @holidaybirdfc.description
   end
 end
