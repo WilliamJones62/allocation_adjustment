@@ -11,6 +11,7 @@
       <th>Channel</th>
       <th>CC</th>
       <th>SKU</th>
+      <th>Units</th>
       <th>Show</th>
     </tr>
   </thead>
@@ -25,6 +26,7 @@
           <td><%= allocation.from_channel_1 %></td>
           <td><%= allocation.from_cc_1 %></td>
           <td><%= allocation.from_sku_1 %></td>
+          <td><%= allocation.from_units_1 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -36,6 +38,7 @@
           <td><%= allocation.from_channel_2 %></td>
           <td><%= allocation.from_cc_2 %></td>
           <td><%= allocation.from_sku_2 %></td>
+          <td><%= allocation.from_units_2 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -47,6 +50,7 @@
           <td><%= allocation.from_channel_3 %></td>
           <td><%= allocation.from_cc_3 %></td>
           <td><%= allocation.from_sku_3 %></td>
+          <td><%= allocation.from_units_3 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -58,6 +62,7 @@
           <td><%= allocation.from_channel_4 %></td>
           <td><%= allocation.from_cc_4 %></td>
           <td><%= allocation.from_sku_4 %></td>
+          <td><%= allocation.from_units_4 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -67,8 +72,9 @@
           <td><%= display_stamp(allocation.created_at) %></td>
           <td> From </td>
           <td><%= allocation.from_channel_5 %></td>
-          <td><%= allocation.from_cc_6 %></td>
-          <td><%= allocation.from_sku_6 %></td>
+          <td><%= allocation.from_cc_5 %></td>
+          <td><%= allocation.from_sku_5 %></td>
+          <td><%= allocation.from_units_5 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -80,6 +86,7 @@
           <td><%= allocation.from_channel_6 %></td>
           <td><%= allocation.from_cc_6 %></td>
           <td><%= allocation.from_sku_6 %></td>
+          <td><%= allocation.from_units_6 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -91,6 +98,7 @@
           <td><%= allocation.to_channel_1 %></td>
           <td><%= allocation.to_cc_1 %></td>
           <td><%= allocation.to_sku_1 %></td>
+          <td><%= allocation.to_units_1 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -102,6 +110,7 @@
           <td><%= allocation.to_channel_2 %></td>
           <td><%= allocation.to_cc_2 %></td>
           <td><%= allocation.to_sku_2 %></td>
+          <td><%= allocation.to_units_2 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -113,6 +122,7 @@
           <td><%= allocation.to_channel_3 %></td>
           <td><%= allocation.to_cc_3 %></td>
           <td><%= allocation.to_sku_3 %></td>
+          <td><%= allocation.to_units_3 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -124,6 +134,7 @@
           <td><%= allocation.to_channel_4 %></td>
           <td><%= allocation.to_cc_4 %></td>
           <td><%= allocation.to_sku_4 %></td>
+          <td><%= allocation.to_units_4 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -133,8 +144,9 @@
           <td><%= display_stamp(allocation.created_at) %></td>
           <td> To </td>
           <td><%= allocation.to_channel_5 %></td>
-          <td><%= allocation.to_cc_6 %></td>
-          <td><%= allocation.to_sku_6 %></td>
+          <td><%= allocation.to_cc_5 %></td>
+          <td><%= allocation.to_sku_5 %></td>
+          <td><%= allocation.to_units_5 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
@@ -146,6 +158,7 @@
           <td><%= allocation.to_channel_6 %></td>
           <td><%= allocation.to_cc_6 %></td>
           <td><%= allocation.to_sku_6 %></td>
+          <td><%= allocation.to_units_6 %></td>
           <td><%= link_to 'Show', allocation %></td>
         </tr>
       <% end %>
