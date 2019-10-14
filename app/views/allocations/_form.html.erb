@@ -24,6 +24,7 @@
         <th>SKU</th>
         <th>Description</th>
         <th>Units</th>
+        <th>ICT?</th>
       </tr>
     </thead>
     <tbody>
@@ -61,6 +62,11 @@
             <%= form.number_field :from_units_1, id: :allocation_from_units_1 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :from_itc_1, id: :allocation_from_itc_1 %>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -96,6 +102,11 @@
             <%= form.number_field :from_units_2, id: :allocation_from_units_2 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :from_itc_2, id: :allocation_from_itc_2 %>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -128,6 +139,11 @@
         <td>
           <div class="field">
             <%= form.number_field :from_units_3, id: :allocation_from_units_3 %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :from_itc_3, id: :allocation_from_itc_3 %>
           </div>
         </td>
       </tr>
@@ -165,6 +181,11 @@
             <%= form.number_field :from_units_4, id: :allocation_from_units_4 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :from_itc_4, id: :allocation_from_itc_4 %>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -198,6 +219,11 @@
         <td>
           <div class="field">
             <%= form.number_field :from_units_5, id: :allocation_from_units_5 %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :from_itc_5, id: :allocation_from_itc_5 %>
           </div>
         </td>
       </tr>
@@ -235,6 +261,11 @@
             <%= form.number_field :from_units_6, id: :allocation_from_units_6 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :from_itc_6, id: :allocation_from_itc_6 %>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -248,7 +279,7 @@
         <th>SKU</th>
         <th>Description</th>
         <th>Units</th>
-        <th colspan="3"></th>
+        <th>ICT?</th>
       </tr>
     </thead>
     <tbody>
@@ -286,6 +317,11 @@
             <%= form.number_field :to_units_1, id: :allocation_to_units_1 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :to_itc_1, id: :allocation_to_itc_1 %>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -321,6 +357,11 @@
             <%= form.number_field :to_units_2, id: :allocation_to_units_2 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :to_itc_2, id: :allocation_to_itc_2 %>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -353,6 +394,11 @@
         <td>
           <div class="field">
             <%= form.number_field :to_units_3, id: :allocation_to_units_3 %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :to_itc_3, id: :allocation_to_itc_3 %>
           </div>
         </td>
       </tr>
@@ -390,6 +436,11 @@
             <%= form.number_field :to_units_4, id: :allocation_to_units_4 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :to_itc_4, id: :allocation_to_itc_4 %>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -425,6 +476,11 @@
             <%= form.number_field :to_units_5, id: :allocation_to_units_5 %>
           </div>
         </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :to_itc_5, id: :allocation_to_itc_5 %>
+          </div>
+        </td>
       </tr>
       <tr>
         <td>
@@ -458,6 +514,11 @@
         <td>
           <div class="field">
             <%= form.number_field :to_units_6, id: :allocation_to_units_6 %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.check_box :to_itc_6, id: :allocation_to_itc_6 %>
           </div>
         </td>
       </tr>

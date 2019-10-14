@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102194154) do
+ActiveRecord::Schema.define(version: 20191009130954) do
 
   create_table "allocations", force: :cascade do |t|
     t.string "name"
@@ -64,6 +64,18 @@ ActiveRecord::Schema.define(version: 20171102194154) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "from_cc_2"
+    t.boolean "from_itc_1"
+    t.boolean "from_itc_2"
+    t.boolean "from_itc_3"
+    t.boolean "from_itc_4"
+    t.boolean "from_itc_5"
+    t.boolean "from_itc_6"
+    t.boolean "to_itc_1"
+    t.boolean "to_itc_2"
+    t.boolean "to_itc_3"
+    t.boolean "to_itc_4"
+    t.boolean "to_itc_5"
+    t.boolean "to_itc_6"
   end
 
   create_table "holidaybirdfcs", force: :cascade do |t|
